@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css.css">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Navbar</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+            <a href="Page.html">
+            <img src="logologo.png" alt="Logo">
+            </a>            
+            </div>
+                <nav>               
+                    <ul class="nav_links">
+                        <li class="ahorro"><a href="ahorro.html">Ahorro<img class="imagen" src="leaf.png"></a></li>
+                        <li class="agua"><a href="agua.html">Agua<img class="imagen" src="water-sharp.png"></a></li>
+                        <li class="amenazas"><a href="Amenzas.html">Amenazas<img class="imagen" src="nuclear-sharp.png"></a></li>
+                    </ul>
+                </nav>
+        </header> 
+        <div class="confondo"><img class="fondo" src="fondo.png" alt="Fondo"></div>
+        <div class="comentarios">
+            <h2>Comentarios</h2>
+            <hr>
+            <form> 
+              <div class="circle"></div>       
+              <textarea id="comentario" name="comentario" rows="1" placeholder="Comparte tus ideas" required></textarea>
+            </form>
+          </div>  
+          <div>
+            <script>
+            const textarea = document.getElementById("comentario");
+
+            textarea.addEventListener("keydown", function (event) {
+                if (event.key === "Enter" && !event.shiftKey) {
+                    event.preventDefault();
+                    enviarComentario();
+                }
+            });
+
+            function enviarComentario() {
+            const comentario = textarea.value.trim();
+            // Aquí puedes agregar el código para enviar el comentario a donde desees.
+            // Por ejemplo, podrías usar una petición AJAX para enviar los datos al servidor.
+            console.log("Comentario enviado:", comentario);
+            // Reseteamos el contenido del área de texto después de enviar el comentario.
+            textarea.value = "";
+            }
+            </script>
+        </div>
+        <div class="contador"><h2>visitas: </h2></div>
+    </body>
+</html>
+
+
+    
